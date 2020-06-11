@@ -1,0 +1,137 @@
+<style>
+	.top-bar {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		height: 40px;
+		line-height: 40px;
+		width: 100%;
+		color: #EEE;
+		background: #212229;
+		margin: 0px;
+	}
+
+	.logo-icon {
+		height: 30px;
+		margin: 5px;
+		float: left;
+	}
+
+	.logo-text {
+		font-weight: 300;
+		letter-spacing: 4px;
+		font-size: 20px;
+		color: #FFF;
+		float: left;
+		margin-left: 10px;
+	}
+
+	.menu {
+		float: right;
+		height: 40px;
+		line-height: 40px;
+	}
+	.menu ul {
+		margin: 0px;
+		margin-block-start: 0px;
+		margin-block-end: 0px;
+		padding-inline-start: 0px;
+	}
+	.menu ul li {
+		display: inline-block;
+		text-decoration: none;
+		margin-left: 10px;
+		font-size: 14px;
+	}
+	.menu ul li a, .menu ul li a:hover, .menu ul li a:active {
+		text-decoration: none;
+		color: #DDD;
+	}
+	.menu ul li a:hover {
+		color: #FFF;
+	}
+	#menu-close {
+		height: 20px;
+		filter: invert(100%);
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		cursor: pointer;
+		padding: 10px 15px;
+		background: #DEDDD6;
+	}
+	#burger {
+		height: 20px;
+		filter: invert(100%);
+		float: right;
+		cursor: pointer;
+		margin: 10px 10px 0px 10px;
+	}
+
+	@media only screen and (max-width: 720px) {
+		#menu {
+			float: none;
+			position: fixed;
+			top: 40px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background: #212229;
+		}
+		.menu ul li {
+			display: block;
+			text-decoration: none;
+			margin: 10px;
+			padding: 10px;
+			font-size: 14px;
+			border-bottom: 1px solid #3b4856;
+			font-size: 20px;
+			text-align: center;
+		}
+		.menu ul li a, .menu ul li a:hover, .menu ul li a:active {
+			text-decoration: none;
+			color: #DDD;
+		}
+		.menu ul li a:hover {
+			color: #FFF;
+		}
+	}
+</style>
+
+<div class="top-bar">
+	<div class="container">
+		<a href="index.html">
+			<img src="img/icons/icon.svg" class="logo-icon" />
+			<div class="logo-text">VanillaHTML</div>
+		</a>
+		<img src="img/icons/burger.svg" id="burger" class="toggle-menu desktop-hidden" />
+		<nav id="menu" class="menu mobile-hidden">
+			<img src="img/icons/close.svg" id="menu-close" class="toggle-menu desktop-hidden" />
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+		</nav>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<script>
+	const toggleMenu = () => {
+		const el = document.getElementById('menu');
+		if (el.classList.contains('hidden') || el.classList.contains('mobile-hidden')) {
+			el.classList.remove('hidden');
+			el.classList.remove('mobile-hidden');
+		} else {
+			el.classList.add('hidden');
+			el.classList.add('mobile-hidden');
+		}
+	};
+
+	document.querySelectorAll('.toggle-menu').forEach((el) => {
+		el.onclick = () => { toggleMenu(); };
+	});
+</script>
