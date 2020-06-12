@@ -3,6 +3,8 @@ Vanilla HTML is a elegantly simple boilerplate for web development projects and 
 
 Demo: https://vanillahtml.com
 
+![VanillaHTML](https://vanillahtml.com/img/promotional/github-banner.jpg)
+
 # Getting Started
 Download and install the zip file from https://github.com/jamesbachini/vanillaHTML/raw/master/docs/html.zip
 
