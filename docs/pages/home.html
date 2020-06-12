@@ -13,11 +13,11 @@
 	h1 {
 		font-size: 25px;
 	}
-	h3, h4 {
+	h2, h3, h4 {
 		color: #6c63ff;
 	}
 	.value-proposition {
-		margin-top: 50px;
+		margin-top: 100px;
 	}
 	.cta-buttons {
 		margin-top: 50px;
@@ -84,6 +84,19 @@
 	.cta-proposition {
 		margin-top: 60px;
 	}
+	#tools {
+		padding: 60px 0px;
+		background: url(img/home/tools-splash.jpg) no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	#tools .features {
+		margin: auto;
+		max-width: 700px;
+	}
+
 	@media only screen and (max-width: 720px) {
 		#introduction {
 			background: url(img/home/introduction-mobile.jpg) no-repeat center center;
@@ -124,6 +137,9 @@
 			width: 80%;
 			margin: 0px auto;
 		}
+		#tools .features {
+			padding: 0px 30px;
+		}
 	}
 
 </style>
@@ -132,13 +148,13 @@
 	<div class="container">
 		<div class="value-proposition">
 			<h1>
-				<span class="skinny">A Lightweight, Fast, Responsive</span><br>
+				<span class="skinny">A Fast, Responsive, Optimized</span><br>
 				Boilerplate For Websites
 			</h1>
 		</div>
 		<div class="cta-buttons">
-			<button><img class="icon invert home-icon" src="img/home/github.svg"></button>
-			<button>Download</button>
+			<button class="button-github"><img class="icon invert home-icon" src="img/home/github.svg"></button>
+			<button class="button-download">Download</button>
 		</div>
 	</div>
 </section>
@@ -176,27 +192,45 @@
 	</div>
 </section>
 
+<section id="tools" class="bkg-alt">
+	<div class="container">
+		<h2 class="text-center">Tools & Features</h2>
+		<div class="features">
+			<p>🦅 Lightweight and fast loading, core is less than 10kb</p>
+			<p>🔍 Optimized for SEO and performance marketing</p>
+			<p>🔃 Development Environment with browser refresh on code change <span class="text-small text-grey">npm run dev</span></p>
+			<p>🐛 ESLint finds more bugs in development and less in production <span class="text-small text-grey">npm run lint</span></p>
+			<p>🎁 Simple CSS class library including flexbox support <span class="text-small text-grey">class="flex-row"</span></p>
+			<p>📱 Mobile first responsive design with simple CSS media queries <span class="text-small text-grey">class="desktop-hidden"</span></p>
+			<p>📕 Javascript utility library full of usefull snippets <span class="text-small text-grey">utils.launchModal('hey');</span></p>
+			<p>🚀 Import ES6 modules compatible with everything but IE <span class="text-small text-grey">import { test } from './test.js';</span></p>
+			<p>📈 Delayed load tracking and analytics management <span class="text-small text-grey">components/pixels.html</span></p>
+		</div>
+	</div>
+</section>
 
 <section id="started">
 	<div class="container">
 		<h3>Start Your Next Project in 60 Seconds</h3>
 		<div class="instructions">
 			<p>
-				<span class="icon-number">1</span> Download the zip and extract the files to a directory.
+				<span class="icon-number">1</span> Download the zip and extract the files
 			</p>
 			<p>
-				<span class="icon-number">2</span> Start by editing the following files:
+				<span class="icon-number">2</span> Start by editing the following:
 				<ul class="text-small">
 					<li>components/header.html</li>
 					<li>pages/home.html</li>
-					<li>components/pixels.html</li>
 				</ul>
 			</p>
 			<p>
 				<span class="icon-number">3</span> As you add pages update <span class="text-small">js/routes.js</span>
 			</p>
 			<p>
-				<span class="icon-number">4</span> Publish to the web
+				<span class="icon-number">4</span> Build reusable web components in <span class="text-small">components/</span>
+			</p>
+			<p>
+				<span class="icon-number">5</span> Publish to the web
 			</p>
 			<p class="text-center text-small">
 				Docs are available if needed <a href="https://vanillahtml.com">https://vanillahtml.com</a>
@@ -213,8 +247,8 @@
 			</h2>
 		</div>
 		<div class="cta-buttons">
-			<button><img class="icon invert home-icon" src="img/home/github.svg"></button>
-			<button>Download</button>
+			<button class="button-github"><img class="icon invert home-icon" src="img/home/github.svg"></button>
+			<button class="button-download">Download</button>
 		</div>
 		<div class="cta-open-source">
 			<p class="text-small text-grey">
@@ -223,3 +257,16 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	document.querySelectorAll('.button-github').forEach((el) => {
+		el.onclick = () => {
+			window.open('https://github.com/jamesbachini/vanillaHTML', '_blank');
+		};
+	});
+	document.querySelectorAll('.button-download').forEach((el) => {
+		el.onclick = () => {
+			window.open('https://github.com/jamesbachini/vanillaHTML/raw/master/docs/html.zip', '_blank');
+		};
+	});
+</script>
