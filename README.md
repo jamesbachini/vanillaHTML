@@ -1,4 +1,4 @@
-# vanillaHTML
+# VanillaHTML
 Vanilla HTML is a elegantly simple boilerplate for web development projects and websites
 
 # Getting Started
