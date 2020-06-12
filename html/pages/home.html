@@ -86,6 +86,11 @@
 	}
 	#tools {
 		padding: 60px 0px;
+		background: url(img/home/tools-splash.jpg) no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 	#tools .features {
 		margin: auto;
@@ -148,8 +153,8 @@
 			</h1>
 		</div>
 		<div class="cta-buttons">
-			<button><img class="icon invert home-icon" src="img/home/github.svg"></button>
-			<button>Download</button>
+			<button class="button-github"><img class="icon invert home-icon" src="img/home/github.svg"></button>
+			<button class="button-download">Download</button>
 		</div>
 	</div>
 </section>
@@ -197,6 +202,7 @@
 			<p>📱 Mobile first responsive design with simple CSS media queries <span class="text-small text-grey">class="desktop-hidden"</span></p>
 			<p>📕 Javascript utility library full of usefull snippets <span class="text-small text-grey">utils.launchModal('hey');</span></p>
 			<p>🚀 Import ES6 modules compatible with everything but IE <span class="text-small text-grey">import { test } from './test.js';</span></p>
+			<p>📈 Delayed load tracking and analytics management <span class="text-small text-grey">components/pixels.html</span></p>
 		</div>
 	</div>
 </section>
@@ -213,7 +219,6 @@
 				<ul class="text-small">
 					<li>components/header.html</li>
 					<li>pages/home.html</li>
-					<li>components/pixels.html</li>
 				</ul>
 			</p>
 			<p>
@@ -237,8 +242,8 @@
 			</h2>
 		</div>
 		<div class="cta-buttons">
-			<button><img class="icon invert home-icon" src="img/home/github.svg"></button>
-			<button>Download</button>
+			<button class="button-github"><img class="icon invert home-icon" src="img/home/github.svg"></button>
+			<button class="button-download">Download</button>
 		</div>
 		<div class="cta-open-source">
 			<p class="text-small text-grey">
@@ -247,3 +252,16 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	document.querySelectorAll('.button-github').forEach((el) => {
+		el.onclick = () => {
+			window.open('https://github.com/jamesbachini/vanillaHTML', '_blank');
+		};
+	});
+	document.querySelectorAll('.button-download').forEach((el) => {
+		el.onclick = () => {
+			window.open('https://github.com/jamesbachini/vanillaHTML/raw/master/docs/html.zip', '_blank');
+		};
+	});
+</script>
