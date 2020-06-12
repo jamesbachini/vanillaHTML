@@ -13,7 +13,7 @@
 	h1 {
 		font-size: 25px;
 	}
-	h3, h4 {
+	h2, h3, h4 {
 		color: #6c63ff;
 	}
 	.value-proposition {
@@ -84,6 +84,14 @@
 	.cta-proposition {
 		margin-top: 60px;
 	}
+	#tools {
+		padding: 60px 0px;
+	}
+	#tools .features {
+		margin: auto;
+		max-width: 700px;
+	}
+
 	@media only screen and (max-width: 720px) {
 		#introduction {
 			background: url(img/home/introduction-mobile.jpg) no-repeat center center;
@@ -123,6 +131,9 @@
 			background: rgba(255, 255, 255, .9);
 			width: 80%;
 			margin: 0px auto;
+		}
+		#tools .features {
+			padding: 0px 30px;
 		}
 	}
 
@@ -176,6 +187,19 @@
 	</div>
 </section>
 
+<section id="tools" class="bkg-alt">
+	<div class="container">
+		<h2 class="text-center">Optional Tools & Features</h2>
+		<div class="features">
+			<p>🔃 Development Environment with browser refresh on code change <span class="text-small text-grey">npm run dev</span></p>
+			<p>🐛 ESLint finds more bugs in development and less in production <span class="text-small text-grey">npm run lint</span></p>
+			<p>🎁 Simple CSS class library including flexbox support <span class="text-small text-grey">class="flex-row"</span></p>
+			<p>📱 Mobile first responsive design with simple CSS media queries <span class="text-small text-grey">class="desktop-hidden"</span></p>
+			<p>📕 Javascript utility library full of usefull snippets <span class="text-small text-grey">utils.launchModal('hey');</span></p>
+			<p>🚀 Import ES6 modules compatible with everything but IE <span class="text-small text-grey">import { test } from './test.js';</span></p>
+		</div>
+	</div>
+</section>
 
 <section id="started">
 	<div class="container">
