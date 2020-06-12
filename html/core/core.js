@@ -7,5 +7,8 @@ export const core = {
     utils.loadModule('components/header.html','header');
     utils.loadModule('components/footer.html','footer');
     routes.init();
+    setTimeout(() => {
+      if (document.getElementById('pixels')) utils.loadModule('components/pixels.html','pixels');
+    }, 3000);
 	},
 };

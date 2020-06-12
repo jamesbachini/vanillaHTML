@@ -9,6 +9,7 @@
 		color: #EEE;
 		background: #212229F7;
 		margin: 0px;
+		z-index: 999900;
 	}
 
 	.logo-icon {
@@ -16,7 +17,6 @@
 		margin: 5px;
 		float: left;
 	}
-
 	.logo-text {
 		font-weight: 300;
 		letter-spacing: 4px;
@@ -24,6 +24,9 @@
 		color: #FFF;
 		float: left;
 		margin-left: 10px;
+	}
+	.logo-alt {
+		color: #ffa970;
 	}
 
 	.menu {
@@ -102,13 +105,13 @@
 	<div class="container">
 		<a href="index.html">
 			<img src="img/icons/icon.svg" class="logo-icon" />
-			<div class="logo-text">VanillaHTML</div>
+			<div class="logo-text">Vanilla<span class="logo-alt">HTML</span></div>
 		</a>
 		<img src="img/icons/burger.svg" id="burger" class="toggle-menu desktop-hidden" />
 		<nav id="menu" class="menu mobile-hidden">
 			<img src="img/icons/close.svg" id="menu-close" class="toggle-menu desktop-hidden" />
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html"><img src="img/icons/home.svg" class="icon invert mobile-hidden" /><span class="desktop-hidden">Home</span></a></li>
 				<li><a href="#">Link</a></li>
 				<li><a href="#">Link</a></li>
 				<li><a href="#">Link</a></li>

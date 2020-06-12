@@ -23,8 +23,21 @@ hr {
 	color: #212229;
 }
 
+button {
+	border-radius: 99px;
+	border: none;
+	padding: 5px 20px;
+	background: #6c63ff;
+	color: #EEE;
+	cursor: pointer;
+}
+
+section {
+	overflow: auto;
+}
+
 #content {
-	margin-top: 60px; /* push down from top menu */
+	margin-top: 40px; /* push down from top menu */
 	min-height: 80%; /* Web core vitals */
 }
 
@@ -53,11 +66,21 @@ hr {
 .clear {
 	clear: both;
 }
+.icon {
+	height: 14px;
+	margin-bottom: -2px;
+}
+.invert {
+	filter: invert(1); 
+}
 .bold {
 	font-weight: 700;
 }
-.vbold {
+.heavy {
 	font-weight: 900;
+}
+.skinny	 {
+	font-weight: 400;
 }
 
 /* Text CSS */
@@ -85,6 +108,12 @@ hr {
 .text-green {
 	color: #256430;
 }
+.text-small {
+	font-size: 0.8em;
+}
+.text-big {
+	font-size: 1.2em;
+}
 
 /* Background CSS */
 .bkg-black {
@@ -92,6 +121,9 @@ hr {
 }
 .bkg-white {
 	background: #FFF;
+}
+.bkg-alt {
+	background: #F7F7F7;
 }
 .bkg-grey {
 	background: #888;

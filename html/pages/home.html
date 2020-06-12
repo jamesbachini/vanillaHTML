@@ -1,6 +1,225 @@
-<div class="container">
-	<h1>Hello World</h1>
-	<hr>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies tellus ac consectetur sodales. Praesent mollis ut erat vitae sagittis. Pellentesque eu fermentum est, ut consequat turpis. Morbi porttitor bibendum ultricies. Vivamus venenatis mattis nulla, a vulputate neque vestibulum vel. Ut euismod urna et dui congue, vitae rutrum tellus convallis. Aenean convallis et neque congue maximus. </p>
-	<p>Maecenas at lorem cursus, egestas odio id, faucibus neque. Morbi sed mauris sodales, consequat ligula eget, convallis ligula. Nam sit amet felis eu risus cursus vestibulum et vel leo. Nulla laoreet magna non maximus eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam varius metus quam, a posuere metus fermentum eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-</div>
+<style>
+	section {
+		border-bottom: 2px solid #EEE;
+	}
+	#introduction {
+		height: 500px;
+		background: url(img/home/introduction-splash.jpg) no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	h1 {
+		font-size: 25px;
+	}
+	h3, h4 {
+		color: #6c63ff;
+	}
+	.value-proposition {
+		margin-top: 50px;
+	}
+	.cta-buttons {
+		margin-top: 50px;
+	}
+	.cta-buttons button {
+		padding: 10px 30px;
+		font-size: 28px;
+		border: 5px solid rgba(255, 255, 255, .5);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+	}
+	.home-icon {
+		height: 24px;
+	}
+	.benefits-boxes {
+		margin: 100px auto;
+	}
+	.benefits-text {
+		padding: 0px 5px;
+	}
+	.benefits-image {
+		max-width: 160px;
+		max-height: 80px;
+	}
+
+	#started {
+		overflow: auto;
+		height: 500px;
+		background: url(img/home/icecream-chill.svg) no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	#started .container {
+		margin: 60px auto;
+	}
+	#started .instructions {
+		background: rgba(255, 255, 255, .9);
+		border: 2px solid #6c63ff;
+		border-radius: 10px;
+		width: 60%;
+		padding: 20px;
+	}
+	#started .instructions ul {
+		margin-left: 30px;
+		margin-top: -10px;
+	}
+	.icon-number {
+		padding: 2px 8px;
+		background: #6c63ff;
+		color: #EEE;
+		border-radius: 99px;
+		margin-right: 10px;
+	}
+	#cta {
+		height: 500px;
+		background: url(img/home/cta-splash.jpg) no-repeat center center; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.cta-proposition {
+		margin-top: 60px;
+	}
+	@media only screen and (max-width: 720px) {
+		#introduction {
+			background: url(img/home/introduction-mobile.jpg) no-repeat center center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			height: 220px;
+		}
+		h1 {
+			font-size: 20px;
+		}
+		.value-proposition {
+			margin-top: 20px;
+		}
+		.cta-buttons button {
+			padding: 6px 18px;
+			font-size: 22px;
+		}
+		.home-icon {
+			height: 18px;
+		}
+		#benefits .benefits-boxes {
+			margin: 30px auto;
+		}
+		#benefits .container {
+			flex-flow: column wrap;
+		}
+		#benefits .benefits-text {
+			width: 50%;
+			margin: 0px auto 30px auto;
+		}
+		#started .container {
+			margin: 20px auto;
+		}
+		#started .instructions {
+			background: rgba(255, 255, 255, .9);
+			width: 80%;
+			margin: 0px auto;
+		}
+	}
+
+</style>
+
+<section id="introduction">
+	<div class="container">
+		<div class="value-proposition">
+			<h1>
+				<span class="skinny">A Lightweight, Fast, Responsive</span><br>
+				Boilerplate For Websites
+			</h1>
+		</div>
+		<div class="cta-buttons">
+			<button><img class="icon invert home-icon" src="img/home/github.svg"></button>
+			<button>Download</button>
+		</div>
+	</div>
+</section>
+
+<section id="benefits">
+	<div class="container flex-row flex-wrap benefits-boxes">
+		<div class="flex-1 benefits-box text-center">
+			<img class="benefits-image" src="img/home/undraw_note_list_etto.svg">
+			<h4>Nothing To Learn</h4>
+			<div class="benefits-text">
+				Elegantly simple and intuitive. Start coding straight away
+			</div>
+		</div>
+		<div class="flex-1 benefits-box text-center">
+			<img class="benefits-image" src="img/home/undraw_web_search_eetr.svg">
+			<h4>Get More Traffic</h4>
+			<div class="benefits-text">
+				Exceeds Google core web vitals and page speed requirements
+			</div>
+		</div>
+		<div class="flex-1 benefits-box text-center">
+			<img class="benefits-image" src="img/home/undraw_segmentation_uioo.svg">
+			<h4>Convert Visitors</h4>
+			<div class="benefits-text">
+				High converting template built by leading CRO expert
+			</div>
+		</div>
+		<div class="flex-1 benefits-box text-center">
+			<img class="benefits-image" src="img/home/undraw_photo_album_e8hj.svg">
+			<h4>Tidy Modules</h4>
+			<div class="benefits-text">
+				Organise pages and components with single file modules
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id="started">
+	<div class="container">
+		<h3>Start Your Next Project in 60 Seconds</h3>
+		<div class="instructions">
+			<p>
+				<span class="icon-number">1</span> Download the zip and extract the files to a directory.
+			</p>
+			<p>
+				<span class="icon-number">2</span> Start by editing the following files:
+				<ul class="text-small">
+					<li>components/header.html</li>
+					<li>pages/home.html</li>
+					<li>components/pixels.html</li>
+				</ul>
+			</p>
+			<p>
+				<span class="icon-number">3</span> As you add pages update <span class="text-small">js/routes.js</span>
+			</p>
+			<p>
+				<span class="icon-number">4</span> Publish to the web
+			</p>
+			<p class="text-center text-small">
+				Docs are available if needed <a href="https://vanillahtml.com">https://vanillahtml.com</a>
+			</p>
+		</div>
+	</div>
+</section>
+
+<section id="cta">
+	<div class="container">
+		<div class="cta-proposition">
+			<h2>
+				<span class="skinny">Ready to</span> start building?
+			</h2>
+		</div>
+		<div class="cta-buttons">
+			<button><img class="icon invert home-icon" src="img/home/github.svg"></button>
+			<button>Download</button>
+		</div>
+		<div class="cta-open-source">
+			<p class="text-small text-grey">
+				<img src="img/icons/icon.svg" class="icon" /> Free, open-source, no attribution required
+			</p>
+		</div>
+	</div>
+</section>
