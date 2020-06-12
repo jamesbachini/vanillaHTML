@@ -1,6 +1,10 @@
 # VanillaHTML
 Vanilla HTML is a elegantly simple boilerplate for web development projects and websites
 
+Demo: https://vanillahtml.com
+
+![VanillaHTML](https://vanillahtml.com/img/promotional/github-banner.jpg)
+
 # Getting Started
 Download and install the zip file from https://github.com/jamesbachini/vanillaHTML/raw/master/docs/html.zip
 
@@ -31,6 +35,26 @@ Check core.css for details: https://github.com/jamesbachini/vanillaHTML/blob/mas
 Tracking and analytics snippets can be placed in components/pixels.html, this will be loaded 3 seconds after the main page to meet page load time requirements.
 
 Don't modify any files in the core folder so that it's easy to update in future. There is site specific CSS in css/style.css and JS in js/script.js
+
+# Resources
+https://vanillahtml.com/
+
+https://unsplash.com/
+
+https://undraw.co/
+
+https://coolors.co/
+
+https://jamesbachini.com/
+
+https://nodejs.org/en/
+
+https://denocode.com/
+
+https://developers.google.com/speed/pagespeed/insights/
+
+https://search.google.com/search-console/welcome
+
 
 # Contribute
 If anyone would like to add code to the project, build templates or make improvements please do so via a pull request.
