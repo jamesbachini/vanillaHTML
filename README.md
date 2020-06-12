@@ -6,14 +6,14 @@ Demo: https://vanillahtml.com
 ![VanillaHTML](https://vanillahtml.com/img/promotional/github-banner.jpg)
 
 # Getting Started
-Download and install the zip file from https://github.com/jamesbachini/vanillaHTML/raw/master/docs/html.zip
+Clone the Git repository or download and install the zip file from https://vanillahtml.com/html.zip
 
 Start by editing the following files:
     components/header.html
     pages/home.html
 
 # Pages
-As you add pages update js/routes.js
+If you add new pages, update js/routes.js
 
 Pages are loaded via the page query parameter. So https://vanillaHTML.com/?page=terms will load the terms.html page. This is setup in routes.js
 
@@ -62,7 +62,7 @@ If anyone would like to add code to the project, build templates or make improve
 I'm keen to keep it lightweight but so anything that's not core should be setup as a 3rd party component.
 
 # To Do
-Webpack integration for optional support of Internet Explorer.
+Integrate babel or another compiler as a optional build process
 Templates
 Components & 3rd party directory
 Docs
