@@ -38,9 +38,7 @@ If anyone would like to add code to the project, build templates or make improve
 I'm keen to keep it lightweight but so anything that's not core should be setup as a 3rd party component.
 
 # To Do
-1. I'd like to build a live reload node module to watch for changes and refresh a browser automatically. This would speed up development and make it more usable for devs coming from Vue/React environments.
-2. Webpack integration for optional support of Internet Explorer.
-3. Linter
-4. Templates
-5. Components
-6. Docs
+Webpack integration for optional support of Internet Explorer.
+Templates
+Components & 3rd party directory
+Docs
