@@ -2,7 +2,7 @@
 Vanilla HTML is a elegantly simple boilerplate for web development projects and websites
 
 # Getting Started
-Download and install the zip file from https://vanillaHTML.com/vanillaHTML.zip
+Download and install the zip file from https://github.com/jamesbachini/vanillaHTML/raw/master/docs/html.zip
 
 Start by editing the following files:
     components/header.html
