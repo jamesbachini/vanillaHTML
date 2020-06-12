@@ -35,6 +35,8 @@ Tracking and analytics snippets can be placed in components/pixels.html, this wi
 Don't modify any files in the core folder so that it's easy to update in future. There is site specific CSS in css/style.css and JS in js/script.js
 
 # Resources
+https://vanillahtml.com/
+
 https://unsplash.com/
 
 https://undraw.co/
