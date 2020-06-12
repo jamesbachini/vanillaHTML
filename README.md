@@ -34,12 +34,19 @@ Don't modify any files in the core folder so that it's easy to update in future.
 
 # Resources
 https://unsplash.com/
+
 https://undraw.co/
+
 https://coolors.co/
+
 https://jamesbachini.com/
+
 https://nodejs.org/en/
+
 https://denocode.com/
+
 https://developers.google.com/speed/pagespeed/insights/
+
 https://search.google.com/search-console/welcome
 
 
