@@ -1,4 +1,5 @@
 import { utils } from './../core/utils.js';
+/* global vSettings */
 
 export const routes = {
   init: async () => {

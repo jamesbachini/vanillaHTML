@@ -1,0 +1,48 @@
+{
+  "name": "vanillahtml",
+  "version": "0.0.1",
+  "description": "Vanilla HTML is a elegantly simple boilerplate for web development projects and websites",
+  "main": "tools/dev.js",
+  "scripts": {
+    "dev": "node tools/dev.js",
+    "test": "eslint html/*/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesbachini/vanillaHTML.git"
+  },
+  "keywords": [
+    "vanillahtml",
+    "vanilla html",
+    "vanilla",
+    "html",
+    "boilerplate",
+    "template",
+    "framework",
+    "js",
+    "css",
+    "vanillajs",
+    "vanillacss",
+    "vanilla"
+  ],
+  "author": "James Bachini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesbachini/vanillaHTML/issues"
+  },
+  "homepage": "https://github.com/jamesbachini/vanillaHTML#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "reload": "^3.1.0",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2"
+  }
+}

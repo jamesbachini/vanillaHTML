@@ -21,13 +21,14 @@ export const utils = {
 	},
 
 	copyToClipboard: (containerid) => {
+		let range;
 		if (document.selection) { 
-			var range = document.body.createTextRange();
+			range = document.body.createTextRange();
 			range.moveToElementText(document.getElementById(containerid));
 			range.select().createTextRange();
 			document.execCommand("Copy"); 
 		} else if (window.getSelection) {
-			var range = document.createRange();
+			range = document.createRange();
 			range.selectNode(document.getElementById(containerid));
 			window.getSelection().removeAllRanges();
 			window.getSelection().addRange(range);
@@ -63,8 +64,8 @@ export const utils = {
 	loadJSON: async (url) => {
 		return new Promise(resolve => {
 			fetch(url)
-  		.then(response => response.json())
-  		.then(json => resolve(json));
+			.then(response => response.json())
+			.then(json => resolve(json));
 		});
 	},
 
@@ -99,7 +100,7 @@ export const utils = {
 		const params = {};
 		let tokens;
 		const regex = /[?&]?([^=]+)=([^&]*)/g;
-		while (tokens = regex.exec(qs)) {
+		while (tokens = regex.exec(qs)) { // eslint-disable-line
 			params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
 		}
 		return params;
