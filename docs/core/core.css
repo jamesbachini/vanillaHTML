@@ -1,0 +1,189 @@
+body, html {
+	border: 0;
+	margin: 0;
+	width: 100%;
+	min-height: 100%;
+	font-family: Arial, sans-serif;
+	letter-spacing: 1px;
+	font-weight: 300;
+	font-size: 16px;
+	color: #212229;
+}
+
+h1, h2, h3, h4, h5 {
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+
+[contenteditable]:focus {
+	outline: 0px solid transparent;
+}
+
+hr {
+	color: #212229;
+}
+
+button {
+	border-radius: 99px;
+	border: none;
+	padding: 5px 20px;
+	background: #6c63ff;
+	color: #EEE;
+	cursor: pointer;
+}
+
+section {
+	overflow: auto;
+}
+
+#content {
+	margin-top: 40px; /* push down from top menu */
+	min-height: 80%; /* Web core vitals */
+}
+
+.container {
+	max-width: 800px;
+	margin: 0px auto;
+	padding: 0px 5px;
+}
+
+/* Utility CSS */
+.hidden {
+	display: none;
+}
+.desktop-hidden {
+	display: none;
+}
+.spacer {
+	margin: 10px;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.icon {
+	height: 14px;
+	margin-bottom: -2px;
+}
+.invert {
+	filter: invert(1); 
+}
+.bold {
+	font-weight: 700;
+}
+.heavy {
+	font-weight: 900;
+}
+.skinny	 {
+	font-weight: 400;
+}
+
+/* Text CSS */
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-black {
+	color: #000;
+}
+.text-white {
+	color: #FFF;
+}
+.text-grey {
+	color: #888;
+}
+.text-red {
+	color: #b4303b;
+}
+.text-green {
+	color: #256430;
+}
+.text-small {
+	font-size: 0.8em;
+}
+.text-big {
+	font-size: 1.2em;
+}
+
+/* Background CSS */
+.bkg-black {
+	background: #000;
+}
+.bkg-white {
+	background: #FFF;
+}
+.bkg-alt {
+	background: #F7F7F7;
+}
+.bkg-grey {
+	background: #888;
+}
+.bkg-red {
+	background: #b4303b;
+}
+.bkg-green {
+	background: #256430;
+}
+
+/* FlexBox CSS */
+.flex-column {
+	display: flex;
+	align-items:center;
+	flex-flow: column nowrap;
+}
+.flex-row {
+	display: flex;
+	align-items:center;
+	flex-flow: row nowrap;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+.flex-1 {
+	flex: 1;
+}
+.flex-2 {
+	flex: 2;
+}
+.flex-3 {
+	flex: 3;
+}
+.flex-4 {
+	flex: 4;
+}
+
+/* Table CSS */
+table.td, table.th {
+	padding: 5px;
+}
+table thead {
+	background: #3b4856;
+	color: #FFF;
+}
+table thead th {
+	padding: 5px;
+	font-weight: 400;
+}
+table tr:nth-child(even) {
+	background: #F7F7F7;
+}
+
+/* Mobile CSS */
+@media only screen and (max-width: 720px) {
+	.desktop-hidden {
+		display: inherit;
+	}
+	.mobile-hidden {
+		display: none;
+	}
+}

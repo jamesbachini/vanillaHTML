@@ -1,0 +1,93 @@
+<style>
+	.footer {
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 20px;
+		line-height: 20px;
+		background: #212229F7;
+		font-size: 11px;
+		color: #AAA;
+		text-align: right;
+	}
+	.footer a, .footer a:visited, .footer a:active, .footer a:hover {
+		color: #EEE;
+		text-decoration: none;
+	}
+
+	.credits {
+		margin-right: 20px;
+		font-size: 0.7em;
+	}
+
+	#modal {
+		position: absolute;
+		left: 10%;
+		right: 10%;
+		top: 10%;
+		background: rgba(0, 0, 0, 0.95);
+		border: solid 3px rgba(90,90,90);
+		padding: 3%;
+		text-align: center;
+		z-index: 999991;
+	}
+	#modal-close {
+		position: absolute;
+		right: -7px;
+		top: -7px;
+		cursor: pointer;
+		height: 30px;
+		width: 30px;
+	}
+
+	#pixels {
+		position: absolute;
+		left: 0%;
+		right: 0%;
+		width: 1px;
+		height: 1px;
+		opacity: 0.1;
+		overflow: hidden;
+	}
+
+	#error-report {
+		position: absolute;
+		bottom: 1%;
+		left: 1%;
+		width: 30%;
+		background: rgba(20, 0, 0, 0.8);
+		color: #EEE;
+		border-radius: 20px;
+		padding: 1%;
+		z-index: 999994;
+		border: 1px solid #b4303b;
+	}
+
+	@media only screen and (max-width: 720px) {
+		#modal-close {
+			width: 20px;
+			height: 20px;
+		}
+	}
+</style>
+
+<div class="footer">
+	<div class="container">
+		<div class="legal-container pull-left">
+			<a href="index.html?page=terms" target="_blank">Terms</a> | 
+			<a href="index.html?page=privacy" target="_blank">Privacy</a>
+		</div>
+		<div class="copyright"></div>
+		<div class="credits">
+			Design By <a href="https://jamesbachini.com" target="_blank">James Bachini</a> | 
+			Powered by <a href="https://vanillahtml.com" target="_blank">VanillaHTML</a>
+		</div>
+	</div>
+</div>
+<div id="modal" class="hidden">
+	<img src="img/icons/close.svg" id="modal-close" />
+	<div id="modal-content"></div>
+</div>
+<div id="pixels"></div>
+<div id="error-report" class="hidden"></div>
