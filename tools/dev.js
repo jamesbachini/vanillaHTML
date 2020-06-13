@@ -6,7 +6,8 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const watch = require('watch');
 const fs = require('fs');
- 
+const opn = require('opn');
+
 const app = express();
  
 const publicDir = path.join(__dirname, '../html');
@@ -29,8 +30,9 @@ reload(app).then((reloadReturned) => {
 		reloadReturned.reload();
 	});
 	server.listen(app.get('port'), function () {
-		console.log('Web server listening on port ' + app.get('port'));
+		console.log(`Server Ready: http://localhost:${app.get('port')} Starting default browser...`);
+		opn(`http://localhost:${app.get('port')}`);
 	})
 }).catch(function (err) {
-	console.error('Reload could not start, could not start server/sample app', err);
+	console.error('Reload could not start, could not start server', err);
 });

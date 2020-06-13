@@ -2,10 +2,12 @@
   "name": "vanillahtml",
   "version": "0.0.1",
   "description": "Vanilla HTML is a elegantly simple boilerplate for web development projects and websites",
-  "main": "tools/dev.js",
+  "main": "js/script.js",
   "scripts": {
     "dev": "node tools/dev.js",
-    "test": "eslint html/*/*.js"
+    "test": "eslint html/*/*.js",
+    "build": "npx webpack --config tools/webpack.build.js",
+    "docs": "npx webpack --config tools/webpack.docs.js"
   },
   "repository": {
     "type": "git",
@@ -32,10 +34,13 @@
   },
   "homepage": "https://github.com/jamesbachini/vanillaHTML#readme",
   "dependencies": {
+    "archiver": "^4.0.1",
     "body-parser": "^1.19.0",
+    "copy-webpack-plugin": "^6.0.2",
     "express": "^4.17.1",
     "http": "0.0.1-security",
     "morgan": "^1.10.0",
+    "opn": "^6.0.0",
     "path": "^0.12.7",
     "reload": "^3.1.0",
     "watch": "^1.0.2"
