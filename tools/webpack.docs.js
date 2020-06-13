@@ -30,8 +30,8 @@ module.exports = {
 						if (err) return console.log(err);
 					});
 
-					console.log('Zip up html directory to dist/html.zip');
-					const output = fs.createWriteStream(path.resolve(__dirname, '../docs/html.zip'));
+					console.log('Zip up html directory to dist/vanillaHTML.zip');
+					const output = fs.createWriteStream(path.resolve(__dirname, '../docs/vanillaHTML.zip'));
 					const archive = archiver('zip', {
 						zlib: { level: 9 } // Sets the compression level.
 					});
@@ -39,7 +39,7 @@ module.exports = {
 						console.log(archive.pointer() + ' total bytes');
 					});
 					archive.pipe(output);
-					archive.directory(path.resolve(__dirname, '../html'), 'html').finalize();
+					archive.directory(path.resolve(__dirname, '../html'), false).finalize();
 				});
 			}
 		}

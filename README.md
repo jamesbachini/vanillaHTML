@@ -6,7 +6,7 @@ Demo: https://vanillahtml.com
 ![VanillaHTML](https://vanillahtml.com/img/promotional/github-banner.jpg)
 
 # Getting Started
-Clone the Git repository or download and install the zip file from https://vanillahtml.com/html.zip
+Clone the Git repository or download and install the zip file from https://vanillahtml.com/vanillaHTML.zip
 
 Start by editing the following files:
     components/header.html
