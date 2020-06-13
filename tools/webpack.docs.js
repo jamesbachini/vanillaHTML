@@ -35,9 +35,11 @@ module.exports = {
 					const archive = archiver('zip', {
 						zlib: { level: 9 } // Sets the compression level.
 					});
-					archive.directory(path.resolve(__dirname, '../html'), 'html');
-					archive.finalize();
-
+					output.on('close', function() {
+						console.log(archive.pointer() + ' total bytes');
+					});
+					archive.pipe(output);
+					archive.directory(path.resolve(__dirname, '../html'), 'html').finalize();
 				});
 			}
 		}
