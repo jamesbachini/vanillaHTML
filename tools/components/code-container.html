@@ -1,0 +1,47 @@
+<!--
+VanillaHTML Module
+code-container.html
+Code Container
+A code container for displaying code snippets
+-->
+<style>
+	.code-container {
+		background: #333;
+		color: #4F4;
+		padding: 10px;
+	}
+	.yellow {
+		color: #fff344;
+	}
+	.purple {
+		color: rgb(168, 57, 219);
+	}
+	.blue {
+		color: rgb(142, 192, 248);
+	}
+</style>
+
+<div class="code-container">
+<pre><code id="code-sample-1">	
+
+</code></pre>
+</div>
+
+<script>
+// don't use script tags in code samples
+const codeSample = `if (friendly) {
+  console.log('Hello VanillaHTML');
+}`;
+
+	const htmlEntities = (str) => {
+		return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+	}
+
+	const codeHighlight = (str) => {
+		return String(str)
+		.split('{').join('<span class="yellow">{</span>').split('}').join('<span class="yellow">}</span>')
+		.replace(/\((.*?)\)/g, '<span class="purple">(<span class="blue">$1</span>)</span>')
+	}
+
+	document.getElementById('code-sample-1').innerHTML = codeHighlight(htmlEntities(codeSample));
+</script>

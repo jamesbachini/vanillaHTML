@@ -1,0 +1,48 @@
+<!--
+VanillaHTML Module
+loading-spinner.html
+Loading Spinner
+A simple rotating circle outline with faded gradient to be used as a spinner while content is loading
+-->
+<style>
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+
+  .spinner-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+  .circle-core {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #FFF;
+  }
+  .circle-border {
+    width: 75px;
+    height: 75px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, rgba(93, 48, 197, 0.1) 33%, rgb(93, 48, 197) 100%);
+    animation: spin .8s linear 0s infinite;
+  }
+</style>
+
+<div class="spinner-box">
+  <div class="circle-border">
+    <div class="circle-core"></div>
+  </div>  
+</div>

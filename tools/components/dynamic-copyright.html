@@ -1,0 +1,14 @@
+<!--
+VanillaHTML Module
+dynamic-copyright.html
+Dynamic Copyright
+Copyright message with dynamic year
+-->
+
+<div id="dynamic-copyright"></div>
+
+<script>
+  const year = new Date().getFullYear();
+  const copyright = `&copy; Copyright 2019-${year}`;
+  document.getElementById('dynamic-copyright').innerHTML = copyright;
+</script>

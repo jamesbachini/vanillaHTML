@@ -73,14 +73,63 @@ section {
 .invert {
 	filter: invert(1); 
 }
+.blur {
+	filter: blur(10px);
+}
 .bold {
 	font-weight: 700;
 }
 .heavy {
 	font-weight: 900;
 }
-.skinny	 {
+.normal {
 	font-weight: 400;
+}
+.light	 {
+	font-weight: 200;
+}
+.responsive-width {
+	max-width: 100%;
+}
+.responsive-height {
+	max-height: 100%;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.overflow-auto {
+	overflow: auto;
+}
+.display-inline {
+	display: inline;
+}
+.display-block {
+	display: block;
+}
+.position-relative {
+	position: relative;
+}
+.position-absolute {
+	position: absolute;
+}
+.border-rounded {
+	border-radius: 5px;
+}
+.border-circle {
+	border-radius: 999px;
+}
+.box-shadow {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* Button CSS */
+.small-button {
+	font-size: 0.8em;
+	padding: 2px 5px;
+}
+.big-button {
+	font-size: 1.5em;
+	padding: 15px 50px;
 }
 
 /* Text CSS */
@@ -136,6 +185,9 @@ section {
 }
 
 /* FlexBox CSS */
+.flex {
+	display: flex;
+}
 .flex-column {
 	display: flex;
 	align-items:center;
@@ -148,6 +200,29 @@ section {
 }
 .flex-wrap {
 	flex-wrap: wrap;
+}
+.flex-grow {
+	flex-grow: 1;
+}
+.flex-end {
+	align-items: flex-end;
+}
+.flex-start {
+	align-items: flex-start;
+}
+.flex-center {
+  align-items: center;
+}
+.flex-middle {
+  align-items: center;
+	justify-content: center;
+  text-align: center;
+}
+.flex-around {
+	justify-content: space-around;
+}
+.flex-between {
+  justify-content: space-between;
 }
 .flex-1 {
 	flex: 1;
@@ -167,7 +242,7 @@ table.td, table.th {
 	padding: 5px;
 }
 table thead {
-	background: #3b4856;
+	background: #6c63ff;
 	color: #FFF;
 }
 table thead th {
@@ -176,6 +251,14 @@ table thead th {
 }
 table tr:nth-child(even) {
 	background: #F7F7F7;
+}
+
+/* Form CSS */
+input[type=text],input[type=email],input[type=password] {
+  outline: none;
+	padding: 5px 10px;
+	border: 1px solid #CCC;
+	border-radius: 5px;
 }
 
 /* Mobile CSS */

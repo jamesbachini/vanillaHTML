@@ -1,0 +1,38 @@
+<!--
+VanillaHTML Module
+breadcrumb.html
+Breadcrumb
+Breadcrumb navigation structure
+-->
+<style>
+ul.breadcrumb {
+  list-style: none;
+	color: #666;
+}
+ul.breadcrumb li {
+  display: inline;
+}
+ul.breadcrumb a, ul.breadcrumb a:visited, ul.breadcrumb a:active {
+	text-decoration: none;
+	color:#333;
+}
+ul.breadcrumb a:hover {
+	text-decoration: none;
+	color: #6c63ff
+}
+ul.breadcrumb li+li:before {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #888;
+  content: "/\00a0";
+}
+ul.breadcrumb:first-child {
+  padding-left: 0px;
+}
+</style>
+
+<ul class="breadcrumb">
+	<li><a href="#">Main</a></li>
+	<li><a href="#">Category</a></li>
+	<li><span>Page</span></li>
+</ul>

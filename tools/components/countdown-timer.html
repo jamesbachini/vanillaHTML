@@ -1,0 +1,50 @@
+<!--
+VanillaHTML Module
+countdown-timer.html
+Countdown Timer
+A countdown timer from halvingdates.com
+-->
+<style>
+  #timer li {
+    display: inline-block;
+    font-size: 16px;
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid #000;
+    background: #333;
+    color: #EEE;
+    border-radius: 5px;
+    min-width: 55px;
+  }
+
+  #timer li span {
+    display: block;
+    font-size: 32px;
+  }
+</style>
+
+<div id="timer">
+  <ul>
+    <li><span id="timer-days">0</span>DAYS</li>
+    <li><span id="timer-hours">0</span>HOURS</li>
+    <li><span id="timer-minutes">0</span>MINS</li>
+    <li><span id="timer-seconds">0</span>SECS</li>
+  </ul>
+</div>
+
+<script>
+  const setTimer = (futureTimestamp) => {
+    let countDown = futureTimestamp;
+    const timer = setInterval(() => {
+      let now = new Date().getTime();
+      let distance = countDown - now;
+      document.getElementById('timer-days').innerText = Math.floor(distance / (86400000)),
+      document.getElementById('timer-hours').innerText = Math.floor((distance % (86400000)) / (3600000)),
+      document.getElementById('timer-minutes').innerText = Math.floor((distance % (3600000)) / (60000)),
+      document.getElementById('timer-seconds').innerText = Math.floor((distance % (60000)) / 1000);
+    }, 1000);
+    return timer;
+  };
+  setTimer(new Date('Sunday, 20 July 2021').getTime());
+</script>

@@ -1,0 +1,57 @@
+<!--
+VanillaHTML Module
+Glass Overlay
+glass-overlay.html
+A glass like overlay which sits on top of a background image
+-->
+<style>
+.glass-background {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://vanillahtml.com/img/home/introduction-splash.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.glass {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://vanillahtml.com/img/home/introduction-splash.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: inset(10em);
+  filter: blur(20px);
+}
+.drop-shadow {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.30));
+
+}
+.glass-content {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background: #FFFFFF44;
+  clip-path: inset(10em);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glass-container h1 {
+  flex: 1;
+}
+</style>
+<div class="glass-background">
+  <div class="drop-shadow">
+    <div class="glass"></div>
+    <div class="glass-content">
+      <h1>VanillaHTML</h1>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<!--
+VanillaHTML Module
+email-form.html
+Email Form
+Email capture form for squeeze pages with pre-load button, designed so it can be used multiple times on same page
+-->	
+<style>
+	.email-capture-input {
+		font-size: 1.5em;
+		padding: 5px 10px;
+	}
+</style>
+
+<div class="email-capture-container flex flex-middle">
+	<div class="email-capture-form hidden flex-1">
+		<div><input type="email" class="email-capture-input" placeholder="Enter Email" /></div>
+		<button class="email-capture-submit big-button spacer">SEND NOW</button>
+	</div>
+	<button class="email-capture-button big-button">SEND ME THIS</button>
+</div>
+
+<script>
+	const validateEmail = (email) => {
+		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(String(email).toLowerCase());
+	};
+
+	document.querySelectorAll('.email-capture-button').forEach((el) => {
+		el.onclick = () => {
+			document.querySelectorAll('.email-capture-form').forEach((captureForm) => {
+				captureForm.classList.remove('hidden');
+			});
+			document.querySelectorAll('.email-capture-button').forEach((captureButton) => {
+				captureButton.classList.add('hidden');
+			});
+		};
+	});
+	document.querySelectorAll('.email-capture-submit').forEach((el) => {
+		el.onclick = () => {
+			document.querySelectorAll('.email-capture-input').forEach((emailInput) => {
+				const email = emailInput.value;
+				if (email && email.length > 3) {
+					const validatedEmail = validateEmail(email);
+					if (validatedEmail) {
+						// send email to server here
+						document.querySelectorAll('.email-capture-container').forEach((emailContainer) => {
+							emailContainer.innerHTML = `<h3>It's on the way, check your email</h3>`;
+						});
+					}
+				}				
+			});
+		};
+	});
+</script>
