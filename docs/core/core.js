@@ -2,7 +2,7 @@ import { utils } from './utils.js';
 import { routes } from './../js/routes.js';
 
 export const core = {
-  init: () => {
+  init: async () => {
     utils.addCanonical();
     utils.loadModule('components/header.html','header');
     utils.loadModule('components/footer.html','footer');

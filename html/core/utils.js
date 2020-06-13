@@ -1,14 +1,14 @@
 export const utils = {
 
-	setTitle: (title) => {
+	setTitle: async (title) => {
 		document.title = title;
 	},
 	
-	setDescription: (description) => {
+	setDescription: async (description) => {
 		document.querySelector('meta[name="description"]').setAttribute('content', description); 
 	},
 	
-	toggleFullScreen: () => {
+	toggleFullScreen: async () => {
 		var doc = window.document;
 		var docEl = doc.documentElement;
 		var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
@@ -20,7 +20,7 @@ export const utils = {
 		}
 	},
 
-	copyToClipboard: (containerid) => {
+	copyToClipboard: async (containerid) => {
 		let range;
 		if (document.selection) { 
 			range = document.body.createTextRange();
@@ -69,7 +69,7 @@ export const utils = {
 		});
 	},
 
-	addCanonical: (fullURL=false) => {
+	addCanonical: async (fullURL=false) => {
 		if (!fullURL) fullURL = document.location;
 		const c = document.createElement('link'); 
 		c.rel = 'canonical'; 
@@ -77,7 +77,7 @@ export const utils = {
 		document.head.appendChild(c);
 	},
 
-	placeCaretAtEnd: (el) => {
+	placeCaretAtEnd: async (el) => {
 		el.focus();
 		if (typeof window.getSelection != "undefined"
 				&& typeof document.createRange != "undefined") {
@@ -116,7 +116,7 @@ export const utils = {
 		}
 	},
 
-	errorHandling: (error) => {
+	errorHandling: async (error) => {
 		console.log(`Error: ${error}`);
 		const errorReport = document.getElementById('error-report');
 		errorReport.classList.remove('hidden');
@@ -124,7 +124,7 @@ export const utils = {
 		setTimeout(() => { errorReport.classList.add('hidden'); }, 10000);
 	},
 
-	launchModal: (htmlContent) => {
+	launchModal: async (htmlContent) => {
 		document.getElementById('modal-content').innerHTML = htmlContent;
 		document.getElementById('modal').classList.remove('hidden');
 		document.getElementById('modal-close').onclick = () => {
@@ -138,11 +138,11 @@ export const utils = {
 		}).replace(/\s+/g, '');
 	},
 
-	eventListener: (id,func) => {
+	eventListener: async (id,func) => {
 		document.addEventListener(id, func);
 	},
 
-	dispatchEvent: (id,detail={}) => {
+	dispatchEvent: async (id,detail={}) => {
 		const newEvent = new CustomEvent(id,detail);
 		document.dispatchEvent(newEvent);
 	},
