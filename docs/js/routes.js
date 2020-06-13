@@ -20,6 +20,7 @@ export const routes = {
     } else {
       await utils.loadModule('pages/home.html','content');
       utils.setTitle(`${vSettings.brand}`);
+      utils.setDescription(`VanillaHTML is the best boilerplate template for websites and web development projects in ${new Date().getFullYear()}. Built with elegantly simple HTML/CSS/JS`);
     }
     return true;
   },
