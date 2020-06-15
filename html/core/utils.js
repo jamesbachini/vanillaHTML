@@ -36,6 +36,15 @@ export const utils = {
 		}
 	},
 
+
+	cleanString: (stringRaw) => {
+		let stringClean = stringRaw;
+		stringClean = String(stringClean);
+		stringClean = stringClean.split(/[^ .$*+?\\\-_:/&=,{}@a-zA-Z0-9\s]/).join('');
+		stringClean = stringClean.substr(0, 255);
+		return stringClean;
+	},
+
 	randID: () => {
 		return (Math.random().toString(36).substring(7) + Math.random().toString(36).substring(7) + Math.random().toString(36).substring(7));
 	},
@@ -77,24 +86,6 @@ export const utils = {
 		document.head.appendChild(c);
 	},
 
-	placeCaretAtEnd: async (el) => {
-		el.focus();
-		if (typeof window.getSelection != "undefined"
-				&& typeof document.createRange != "undefined") {
-			const range = document.createRange();
-			range.selectNodeContents(el);
-			range.collapse(false);
-			const sel = window.getSelection();
-			sel.removeAllRanges();
-			sel.addRange(range);
-		} else if (typeof document.body.createTextRange != "undefined") {
-			const textRange = document.body.createTextRange();
-			textRange.moveToElementText(el);
-			textRange.collapse(false);
-			textRange.select();
-		}
-	},
-
 	getQueryParams: () => {
 		const qs = document.location.search.split("+").join(" ");
 		const params = {};
@@ -104,16 +95,6 @@ export const utils = {
 			params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
 		}
 		return params;
-	},
-
-	detectEnterKey: (event,enterCB=false) => {
-		if (!event) event = window.event;
-		const keyCode = event.keyCode || event.which;
-		if (keyCode == '13') {
-			if (event.shiftKey !== true) {
-				enterCB();
-			}
-		}
 	},
 
 	errorHandling: async (error) => {
@@ -132,7 +113,11 @@ export const utils = {
 		};
 	},
 
-	camelize: (str) => {
+	titleCase: (phrase) => {
+		return phrase.toLowerCase().split('-').join(' ').split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+	},
+
+	camelCase: (str) => {
 		return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
 			return index === 0 ? word.toLowerCase() : word.toUpperCase();
 		}).replace(/\s+/g, '');
@@ -145,6 +130,10 @@ export const utils = {
 	dispatchEvent: async (id,detail={}) => {
 		const newEvent = new CustomEvent(id,detail);
 		document.dispatchEvent(newEvent);
+	},
+
+	sha256: (data) => {
+		return crypto.createHash('sha256').update(data).digest('hex');
 	},
 
 };
