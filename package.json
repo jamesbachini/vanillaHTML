@@ -7,6 +7,7 @@
     "dev": "node tools/dev.js",
     "test": "eslint html/*/*.js",
     "build": "npx webpack --config tools/webpack.build.js",
+    "devdocs": "node tools/dev.js docs",
     "docs": "npx webpack --config tools/webpack.docs.js"
   },
   "repository": {

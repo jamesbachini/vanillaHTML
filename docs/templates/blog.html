@@ -1,0 +1,94 @@
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+	.blog-image, .blog-contents {
+		font-family: 'Roboto Slab', sans-serif;
+	}
+	.blog-image {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 30%;
+		height: 100%;
+		background: url('templates/blog/blog.jpg') no-repeat;
+		background-size: cover;
+	}
+	.blog-main {
+		position: absolute;
+		top: 0px;
+		left: 30%;
+		width: 60%;
+		height: 100%;
+		background: linear-gradient(to bottom, #ffffff 0%,#f8edeb 100%);
+		overflow: auto;
+	}
+	.blog-contents {
+		padding: 20px;
+	}
+	.blog-toolbar {
+		position: absolute;
+		top: 0px;
+		left: 90%;
+		width: 10%;
+		height: 100%;
+		background: #ffb5a7;
+		display: flex;
+		align-items:center;
+		flex-flow: column nowrap;
+	}
+	.blog-toolbar .social-icon {
+		max-width: 50%;
+		max-height: 50%;
+		filter: invert(1);
+		cursor: pointer;
+		opacity: 0.8;
+	}
+	@media only screen and (max-width: 720px) {
+		.blog-main {
+			width: 70%;
+		}
+		.blog-toolbar {
+			position: absolute;
+			top: 90%;
+			left: 0%;
+			height: 10%;
+			width: 100%;
+			display: flex;
+			align-items:center;
+			flex-flow: row nowrap;
+		}
+		.blog-toolbar .social-icon {
+			margin-bottom: 20px;
+		}
+		.blog-main {
+			height: 90%;
+		}
+	}
+</style>
+
+<div class="blog-container">
+	<div class="blog-image">
+
+	</div>
+	<div class="blog-main">
+		<div class="blog-contents">
+			<h1>My Corner Of The Web</h1>
+			<h2>Blog Post</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere nec eros sed ornare. Nunc a dui ac massa faucibus finibus. Sed neque turpis, rhoncus ut ornare sed, ultrices nec mauris. Phasellus condimentum imperdiet pretium. Donec varius vestibulum lectus sed tempus. Vestibulum tempor tempus vestibulum. Donec elementum leo nec risus facilisis facilisis. Sed placerat, purus ac dictum posuere, ex turpis blandit dolor, nec aliquam elit lacus molestie ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc id blandit sapien, non rutrum nulla. Praesent ante nisi, volutpat nec aliquet eget, luctus vitae nunc. Aliquam vestibulum leo ut semper mollis.
+			</p>
+			<p>
+				Pellentesque ut neque eleifend, hendrerit est eget, eleifend turpis. Nam ultrices lectus diam, quis aliquet eros auctor a. Morbi efficitur ullamcorper felis sit amet blandit. Mauris porta nisl leo, quis eleifend mauris auctor tempor. Proin tincidunt, urna eu efficitur luctus, lectus lorem varius augue, sed tincidunt magna velit non leo. Sed auctor ornare odio ac egestas. Etiam elit tellus, varius in purus ac, rutrum pulvinar urna. Duis vel sollicitudin nunc.
+			</p>
+			<p>
+				Praesent ultricies lorem eu nibh egestas cursus. Cras pulvinar nisl vitae urna aliquet, id mollis nisi placerat. Maecenas porttitor lacus eros. Aliquam ut sem libero. In hac habitasse platea dictumst. In hendrerit, mauris non tristique sodales, risus lacus semper risus, ac venenatis eros diam a enim. Quisque ac elit id nibh malesuada varius in id sapien. Cras euismod commodo aliquam. 
+			</p>
+		</div>
+	</div>
+	<div class="blog-toolbar">
+		<img class="social-icon flex-1" src="templates/blog/social/facebook.svg" alt="" />
+		<img class="social-icon flex-1" src="templates/blog/social/instagram.svg" alt="" />
+		<img class="social-icon flex-1" src="templates/blog/social/tiktok.svg" alt="" />
+		<img class="social-icon flex-1" src="templates/blog/social/twitter.svg" alt="" />
+	</div>
+</div>

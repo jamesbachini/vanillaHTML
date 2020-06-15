@@ -2,7 +2,7 @@
 import { core } from './../core/core.js';
 
 window.vSettings = {
-  brand: 'VanillaHTML',
+	brand: 'VanillaHTML',
 }
 
 core.init();

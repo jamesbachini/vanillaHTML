@@ -1,0 +1,117 @@
+<style>
+	.library-item {
+		padding: 5px;
+		margin: 5px;
+		text-align: center;
+		flex: 1;
+		border-radius: 5px;
+		border: 3px solid #000;
+		background: #212229F7;
+		color: #EEE;
+	}
+	.library-preview {
+		max-width: 200px;
+		border: 3px solid #CCC;
+		border-radius: 5px;
+	}
+	.library-description {
+		font-size: 0.8em;
+		text-align: left;
+		margin: 10px;
+		min-height: 50px;
+	}
+	.library-title {
+		color: #ffa970;
+	}
+	h3 {
+		color: #6c63ff;
+		text-align: center;
+		padding-top: 20px;
+	}
+</style>
+
+<div class="container">	
+	<h3>Components</h3>
+	<p>VanillaHTML components are single .html files that contain the HTML,CSS & JS. They can be used with any web based project. To import into a VanillaHTML template, place the file in the components directory and use the loadModule(fileLocation,elementID) function to load it into an existing element on the page.</p>
+	<div id="component-library"></div>
+</div>
+
+<script>
+	const componentLibrary = {
+		'breadcrumbs': {
+			name: 'Breadcrumbs',
+			file: 'breadcrumbs.html',
+			description: 'Breadcrumb navigation structure',
+			preview: 'breadcrumbs.jpg',
+		},
+		'code-container': {
+			name: 'Code Container',
+			file: 'code-container.html',
+			description: 'A code container for displaying code snippets',
+			preview: 'code-container.jpg',
+		},
+		'countdown-timer': {
+			name: 'Countdown Timer',
+			file: 'countdown-timer.html',
+			description: 'A countdown timer from halvingdates.com',
+			preview: 'countdown-timer.jpg',
+		},
+		'Dynamic-Copyright': {
+			name: 'Dynamic Copyright',
+			file: 'dynamic-copyright.html',
+			description: 'Copyright message with dynamic year',
+			preview: 'dynamic-copyright.jpg',
+		},
+		'email-form': {
+			name: 'Email Form',
+			file: 'email-form.html',
+			description: 'Email capture form for squeeze pages with pre-load button, designed so it can be used multiple times on same page',
+			preview: 'email-form.jpg',
+		},
+		'glass-overlay': {
+			name: 'Glass Overlay',
+			file: 'glass-overlay.html',
+			description: 'A glass like overlay which sits on top of a background image',
+			preview: 'glass-overlay.jpg',
+		},
+		'loading-spinner': {
+			name: 'Loading Spinner',
+			file: 'loading-spinner.html',
+			description: 'A simple rotating circle outline with faded gradient to be used as a spinner while content is loading',
+			preview: 'loading-spinner.jpg',
+		},
+		'range-slider': {
+			name: 'Range Slider',
+			file: 'range-slider.html',
+			description: 'A range slider with min/max and displayed output',
+			preview: 'range-slider.jpg',
+		},
+		'youtube-video': {
+			name: 'Youtube Video',
+			file: 'youtube-video.html',
+			description: 'A Youtube video container with subscription link in header',
+			preview: 'youtube-video.jpg',
+		},
+		/*
+		'': {
+			name: '',
+			file: '.html',
+			description: '',
+			preview: '.jpg',
+		},
+		*/
+	};
+
+	let libraryHTML = `<div class="flex-row flex-wrap flex-start">`;
+	Object.keys(componentLibrary).forEach((cName) => {
+		const c = componentLibrary[cName];
+		libraryHTML += `<div class="library-item">
+			<div class="library-title">${c.name}</div>
+			<img class="library-preview" src="components/${c.preview}" alt="${c.name} preview" loading="lazy" />
+			<div class="library-description">${c.description}</div>
+			<a href="components/${c.file}" download><button>Download ${c.name}</button></a>
+		</div>`;
+	});
+	libraryHTML += `</div>`;
+	document.getElementById('component-library').innerHTML = libraryHTML;
+</script>

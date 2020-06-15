@@ -1,0 +1,65 @@
+<style>
+	.library-item {
+		padding: 5px;
+		margin: 5px;
+		text-align: center;
+		flex: 1;
+		border-radius: 5px;
+		border: 3px solid #000;
+		background: #212229F7;
+		color: #EEE;
+    width: 100%;
+	}
+	.library-preview {
+		height: 200px;
+    max-width: 100%;
+		border: 3px solid #000;
+		border-radius: 5px;
+	}
+	.library-description {
+		font-size: 0.8em;
+		margin: 10px;
+		min-height: 50px;
+	}
+	.library-title {
+		color: #ffa970;
+	}
+	h3 {
+		color: #6c63ff;
+		text-align: center;
+		padding-top: 20px;
+	}
+</style>
+
+<div class="container">	
+	<h3>Templates</h3>
+	<p>These templates can be used either as a starting point in themselves or as a page imported into the main VanillaHTML boilerplate. To reuse one as a base rename it to home.html and drop it into the pages/ directory</p>
+	<div id="template-library"></div>
+</div>
+
+<script>
+	const templateLibrary = {
+		'blog': {
+			name: 'Personal Blog',
+			file: 'blog.html',
+			description: 'A website template for a personal blog',
+      reference: 'blog',
+		},
+	};
+
+	let libraryHTML = `<div class="flex-row flex-wrap flex-start">`;
+	Object.keys(templateLibrary).forEach((cName) => {
+		const c = templateLibrary[cName];
+		libraryHTML += `<div class="library-item">
+			<div class="library-title">${c.name}</div>
+			<img class="library-preview" src="templates/${c.reference}/preview-desktop.png" alt="${c.name} preview" loading="lazy" />
+			<img class="library-preview" src="templates/${c.reference}/preview-mobile.png" alt="${c.name} preview" loading="lazy" />
+			<div class="library-description">${c.description}</div>
+			<a href="?page=templates-${c.reference}" target="_blank"><button>Preview</button></a>
+			<a href="templates/${c.file}" download><button>Download HTML</button></a>
+			<a href="templates/${c.reference}/images.zip"><button>Download Images</button></a>
+		</div>`;
+	});
+	libraryHTML += `</div>`;
+	document.getElementById('template-library').innerHTML = libraryHTML;
+</script>

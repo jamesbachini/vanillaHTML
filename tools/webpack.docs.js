@@ -12,6 +12,7 @@ module.exports = {
 	plugins: [
 		new CopyPlugin({
 			patterns: [
+				{ from: path.resolve(__dirname, '../docs/js/routes_master.js'), to: path.resolve(__dirname, '../docs/js/routes.js') },
 				{ from: path.resolve(__dirname, '../html'), to: path.resolve(__dirname, '../docs') },
 			],
 			options: {
@@ -22,6 +23,7 @@ module.exports = {
 			apply: (compiler) => {
 				compiler.hooks.afterEmit.tap('done', (compilation) => {
 
+				/*
 					console.log('Editing index.html to include packaged JS');
 					const indexPath = path.resolve(__dirname, '../docs/index.html');
 					let indexHTML = fs.readFileSync(indexPath, 'utf8');
@@ -29,7 +31,7 @@ module.exports = {
 					fs.writeFile(indexPath, indexHTML, function (err) {
 						if (err) return console.log(err);
 					});
-
+				*/
 					console.log('Zip up html directory to dist/vanillaHTML.zip');
 					const output = fs.createWriteStream(path.resolve(__dirname, '../docs/vanillaHTML.zip'));
 					const archive = archiver('zip', {
