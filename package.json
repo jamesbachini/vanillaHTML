@@ -1,11 +1,11 @@
 {
-  "name": "vanillahtml",
+  "name": "VanillaHTML",
   "version": "0.0.1",
-  "description": "Vanilla HTML is a elegantly simple boilerplate for web development projects and websites",
+  "description": "VanillaHTML is an elegantly simple boilerplate for web development projects and websites",
   "main": "js/script.js",
   "scripts": {
     "dev": "node tools/dev.js",
-    "test": "eslint html/*/*.js",
+    "lint": "eslint html/*/*.js",
     "build": "npx webpack --config tools/webpack.build.js",
     "devdocs": "node tools/dev.js docs",
     "docs": "npx webpack --config tools/webpack.docs.js"
