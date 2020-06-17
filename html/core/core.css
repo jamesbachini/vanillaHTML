@@ -76,18 +76,6 @@ section {
 .blur {
 	filter: blur(10px);
 }
-.bold {
-	font-weight: 700;
-}
-.heavy {
-	font-weight: 900;
-}
-.normal {
-	font-weight: 400;
-}
-.light	 {
-	font-weight: 200;
-}
 .responsive-width {
 	max-width: 100%;
 }
@@ -162,6 +150,24 @@ section {
 }
 .text-big {
 	font-size: 1.2em;
+}
+.text-bold {
+	font-weight: 700;
+}
+.text-heavy {
+	font-weight: 900;
+}
+.text-normal {
+	font-weight: 400;
+}
+.text-light	 {
+	font-weight: 200;
+}
+.text-italic {
+	font-style: italic;
+}
+.text-underline {
+	text-decoration: underline;
 }
 
 /* Background CSS */
