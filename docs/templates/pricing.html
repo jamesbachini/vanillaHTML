@@ -1,0 +1,179 @@
+<style>
+	.page-background {
+		background: linear-gradient(#EEE, #FFF);
+		min-height: 100%;
+	}
+	section {
+		text-align: center;
+		margin: 20px auto;
+	}
+	.price-box {
+		background: #FFF;
+		border-radius: 5px;
+		padding: 0px 20px;
+		width: 200px;
+		max-width: 200px;
+		min-width: 200px;
+		text-align: left;
+		margin: 10px;
+		box-shadow: 0px 0px 15px 0px #ccc;
+	}
+	.price-amount {
+		max-width: 150px;
+		height: 70px;
+	}
+	.price-total {
+		font-size: 3em;
+		font-weight: 700;
+	}
+	.price-period {
+		margin-top: 30px;
+	}
+	button {
+		padding: 5px 20px;
+		font-size: 18px;
+	}
+	.price-head h2 {
+		color: #544ec4;
+	}
+	@media only screen and (max-width: 720px) {
+		#pricing-header h3 {
+			font-size: 0.8em;
+			margin-bottom: 0px;
+		}
+		.price-box {
+			font-size: 0.8em;
+			padding: 0px 20px;
+			width: 240px;
+			max-width: 240px;
+			min-width: 240px;
+			margin: 5px;
+		}
+		button {
+			padding: 5px 20px;
+		}
+		.price-amount {
+			height: 50px;
+		}
+		.price-box .spacer {
+			margin: 2px;
+		}
+	}
+
+</style>
+<div class="page-background">
+	<section id="pricing-header">
+		<div class="container">
+			<h1>
+				<span class="light">Straightforward,</span> Pricing Plans
+			</h1>
+			<h3>Backed up by our full money back guarantee*</h3>
+		</div>
+	</section>
+
+	<section id="pricing-options">
+		<div class="container flex-row flex-wrap flex-middle">
+
+			<div class="flex-1 price-box">
+				<div class="price-head">
+					<h2>Essentials</h2>
+				</div>
+				<div class="price-amount position-relative">
+					<div class="price-currency pull-left">£</div>
+					<div class="price-total pull-left">25</div>
+					<div class="price-period text-grey pull-left">/month</div>
+				</div>
+				<div class="clear"></div>
+				<div class="price-includes">
+					<p>✔️ Full Editor</p>
+					<p>✔️ Auto-Optimisation</p>
+					<p>✔️ SEO Analysis</p>
+					<p>✔️ Traffic Estimator</p>
+					<p>✔️ 2 Website License</p>
+					<p>✔️ Full Guarantee</p>
+				</div>
+				<button class="button-cta">Start For Free</button>
+				<div class="spacer">&nbsp;</div>
+			</div>
+
+			<div class="flex-1 price-box position-relative">
+				<div class="price-head">
+					<h2>Professional</h2>
+				</div>
+				<div class="price-amount position-relative">
+					<div class="price-currency pull-left">£</div>
+					<div class="price-total pull-left">65</div>
+					<div class="price-period text-grey pull-left">/month</div>
+				</div>
+				<div class="clear"></div>
+				<div class="price-includes">
+					<p>✔️ Essentials Package</p>
+					<p>✔️ Keyword Research</p>
+					<p>✔️ Outreach Tools</p>
+					<p>✔️ SEO & CRO Audit</p>
+					<p>✔️ 20 Website License</p>
+					<p>✔️ Full Guarantee</p>
+				</div>
+				<button class="button-cta">Start For Free</button>
+				<div class="spacer">&nbsp;</div>
+			</div>
+
+			<div class="flex-1 price-box">
+				<div class="price-head">
+					<h2>Network</h2>
+				</div>
+				<div class="price-amount position-relative">
+					<div class="price-currency pull-left">Custom Pricing, request quotation</div>
+				</div>
+				<div class="clear"></div>
+				<div class="price-includes">
+					<p>✔️ Full Service SEO</p>
+					<p>✔️ API Integrations</p>
+					<p>✔️ Content Creation</p>
+					<p>✔️ Automated Growth</p>
+					<p>✔️ Unlimited Usage</p>
+					<p>✔️ Account Manager</p>
+				</div>
+				<button class="button-contact">Talk To An Expert</button>
+				<div class="spacer">&nbsp;</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section id="pricing-guarantee">
+		<div class="container">
+			<div>
+				Guarantee includes full refund on cancellation of account after 8 months from date of sign up.<br>
+			</div>
+			<div class="text-small text-italic spacer">
+				Only payable if organic traffic has not doubled since initial use based on 30 day figures.<br>
+				Google analytics & WPAdmin access required for verification.<br>
+				Minimum requirement of 2 posts per month.<br>
+				One refund per customer.
+			</div>
+		</div>
+	</section>
+
+
+	<section id="pricing-footer">
+		<div class="container">
+			<div class="pricing-signoff">
+				If you have any queries please do not hesitate to <a href="?page=contact">contact us</a>
+			</div>
+		</div>
+	</section>
+</div>
+
+<script>
+	document.querySelectorAll('.button-contact').forEach((el) => {
+		el.onclick = () => {
+			window.location = '?page=contact';
+		};
+	});
+	document.querySelectorAll('.button-cta').forEach((el) => {
+		el.onclick = () => {
+			window.location = '?page=preorder';
+		};
+	});
+</script>

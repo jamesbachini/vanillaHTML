@@ -39,17 +39,27 @@
 
 <script>
 	const templateLibrary = {
+		'pricing': {
+			name: 'Pricing Plans',
+			file: 'pricing.html',
+			description: 'Pricing and plans using standard 3 option tried and tested design',
+      reference: 'pricing',
+			images: false,
+		},
 		'blog': {
 			name: 'Personal Blog',
 			file: 'blog.html',
 			description: 'A website template for a personal blog',
       reference: 'blog',
+			images: 'blog/images.zip',
 		},
 	};
 
 	let libraryHTML = `<div class="flex-row flex-wrap flex-start">`;
 	Object.keys(templateLibrary).forEach((cName) => {
 		const c = templateLibrary[cName];
+		let imageFiles = '';
+		if (c.images) imageFiles = `<a href="templates/${c.images}"><button>Download Images</button></a>`;
 		libraryHTML += `<div class="library-item">
 			<div class="library-title">${c.name}</div>
 			<img class="library-preview" src="templates/${c.reference}/preview-desktop.png" alt="${c.name} preview" loading="lazy" />
@@ -57,7 +67,7 @@
 			<div class="library-description">${c.description}</div>
 			<a href="?page=templates-${c.reference}" target="_blank"><button>Preview</button></a>
 			<a href="templates/${c.file}" download><button>Download HTML</button></a>
-			<a href="templates/${c.reference}/images.zip"><button>Download Images</button></a>
+			${imageFiles}
 		</div>`;
 	});
 	libraryHTML += `</div>`;
