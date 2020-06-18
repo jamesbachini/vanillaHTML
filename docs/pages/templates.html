@@ -18,8 +18,8 @@
 	}
 	.library-description {
 		font-size: 0.8em;
-		margin: 10px;
-		min-height: 50px;
+		margin: 10px 0px 0px 0px;
+		min-height: 30px;
 	}
 	.library-title {
 		color: #ffa970;
@@ -29,12 +29,22 @@
 		text-align: center;
 		padding-top: 20px;
 	}
+	button {
+		margin: 3px;
+	}
+	@media only screen and (max-width: 720px) {
+		.library-item {
+			width: 90%;
+		}
+	}
 </style>
 
 <div class="container">	
 	<h3>Templates</h3>
 	<p>These templates can be used either as a starting point in themselves or as a page imported into the main VanillaHTML boilerplate. To reuse one as a base rename it to home.html and drop it into the pages/ directory</p>
 	<div id="template-library"></div>
+	<div class="spacer"></div>
+	<div class="spacer"></div>
 </div>
 
 <script>
@@ -46,6 +56,13 @@
       reference: 'pricing',
 			images: false,
 		},
+		'contact': {
+			name: 'Google Forms',
+			file: 'contact.html',
+			description: 'A contact page built with Google Forms, a simple way to embed contact forms, surveys, email submits etc.',
+      reference: 'contact',
+			images: false,
+		},
 		'blog': {
 			name: 'Personal Blog',
 			file: 'blog.html',
@@ -55,7 +72,7 @@
 		},
 	};
 
-	let libraryHTML = `<div class="flex-row flex-wrap flex-start">`;
+	let libraryHTML = `<div class="flex-column flex-wrap flex-start">`;
 	Object.keys(templateLibrary).forEach((cName) => {
 		const c = templateLibrary[cName];
 		let imageFiles = '';
