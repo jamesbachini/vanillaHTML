@@ -25,10 +25,10 @@ export const routes = {
 			await utils.loadModule('pages/templates.html','content');
 			utils.setTitle(`${vSettings.brand} Templates | HTML Template Library`);
 			utils.setDescription(`Drag and drop HTML templates which you can use as standalone files or as pages within a VanillaHTML boilerplate`);
-		} else if (get.page && get.page === 'templates-blog') {
-			await utils.loadModule('templates/blog.html','content');
-			utils.setTitle(`${vSettings.brand} Blog | HTML Blog Template`);
-			utils.setDescription(`A VanillaHTML single file template for a personal blog. Use this to create your little corner of the web.`);
+		} else if (get.page && String(get.page).includes('templates-')) {
+			const templatePage = utils.cleanString(String(get.page).split('templates-').join(''));
+			await utils.loadModule(`templates/${templatePage}.html`,'content');
+			utils.setTitle(`${vSettings.brand} ${utils.titleCase(templatePage)} | HTML ${utils.titleCase(templatePage)} Template`);
 		} else {
 			await utils.loadModule('pages/home.html','content');
 			utils.setTitle(`${vSettings.brand} | HTML Boilerplate`);
