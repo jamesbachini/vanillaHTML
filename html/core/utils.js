@@ -97,6 +97,11 @@ export const utils = {
 		return params;
 	},
 
+	scrollTo: (anchor=false) => {
+		if (!anchor && String(document.location).includes('#')) anchor = String(document.location).split('#')[1];
+		if (anchor) document.location.hash = anchor;
+	},
+
 	errorHandling: async (error) => {
 		console.log(`Error: ${error}`);
 		const errorReport = document.getElementById('error-report');
